@@ -36,7 +36,7 @@ export const productListSlice = createSlice({
       const category = state.categoryFilter;
       state.products = state.defaultProducts.filter(
         (product) =>
-          product.title.toLowerCase().includes(keyword) &&
+          product.title.toLowerCase().includes(keyword.toLowerCase()) &&
           (category === "all" || product.category === category)
       );
     },
