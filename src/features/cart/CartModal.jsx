@@ -81,9 +81,9 @@ const CartModal = ({ handleHideModalCart }) => {
                     {/* Desktop View END */}
 
                     <div className="flex items-center gap-2">
-                      <h4 className="text-sm">{product.price}</h4>
+                      <h4 className="text-sm">${product.price}</h4>
                       <h3 className="text-lg font-bold">
-                        {product.totalPrice}
+                        ${product.totalPrice}
                       </h3>
                     </div>
                     <div className="flex items-center gap-4 mt-4 ml-auto">
