@@ -31,11 +31,11 @@ const CartModal = ({ handleHideModalCart }) => {
     const orderDetails = formatOrderDetails(cartItems);
 
     const phoneNumber = "6281285241889";
-    const message = `Halo bang, aku mau order:\n\n${orderDetails}\n\nTotal: $${totalPrice}`;
+    const message = encodeURIComponent(
+      `Halo bang, aku mau order:\n\n${orderDetails}\n\nTotal: $${totalPrice}`
+    );
 
-    const URL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-      message
-    )}`;
+    const URL = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(URL, "_blank");
   };
 
