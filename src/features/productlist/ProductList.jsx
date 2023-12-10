@@ -24,6 +24,16 @@ const ProductList = () => {
       setIsLoading(true);
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
+        // Filter products order by title ASC
+        response.data.sort((a, b) => {
+          if (a.title < b.title) {
+            return -1;
+          }
+          if (a.title > b.title) {
+            return 1;
+          }
+          return 0;
+        });
         dispatch(setProducts(response.data));
       } catch (error) {
         console.error(error);
@@ -45,7 +55,7 @@ const ProductList = () => {
   return (
     <>
       {isLoading ? (
-        <div className="flex justify-center items-center -mt-40 min-h-screen">
+        <div className="flex justify-center items-center pt-40">
           <div className="loader"></div>
         </div>
       ) : (
@@ -63,7 +73,7 @@ const ProductList = () => {
                 />
               </div>
               <div className="px-5 pb-5 flex-grow">
-                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white flex">
+                <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                   {product.title}
                 </h5>
                 <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">

@@ -26,6 +26,7 @@ const CartModal = ({ handleHideModalCart }) => {
   };
 
   const handleCheckoutToWhatsapp = () => {
+    if (totalItems === 0) return;
     const orderDetails = formatOrderDetails(cartItems);
 
     const phoneNumber = "6281285241889";
@@ -111,7 +112,7 @@ const CartModal = ({ handleHideModalCart }) => {
             className="bg-green-600 hover:bg-slate-800 text-white font-bold py-3 px-8 rounded-xl text-sm"
             onClick={handleCheckoutToWhatsapp}
           >
-            Checkout (whatsapp)
+            Checkout (WhatsApp)
           </button>
         </div>
       </div>
