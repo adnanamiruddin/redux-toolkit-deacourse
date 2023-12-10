@@ -16,7 +16,7 @@ const ProductList = () => {
       setIsLoading(true);
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
-        // Filter products order by title ASC
+        // Sort products order by title ASC
         response.data.sort((a, b) => {
           if (a.title < b.title) {
             return -1;
