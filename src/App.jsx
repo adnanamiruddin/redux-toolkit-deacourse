@@ -45,7 +45,7 @@ const App = () => {
         <CartModal handleHideModalCart={handleHideModalCart} />
       ) : null}
       <Header handleOpenModalCart={handleOpenModalCart} />
-      <main className="max-w-7xl mx-auto px-4 pt-24 pb-16">
+      <main className="max-w-7xl mx-auto px-4 pt-24 pb-24 md:pb-16">
         <SearchProducts />
         <div className="md:flex md:justify-between md:items-center mt-6 gap-8">
           <SortProductsByPrice />
