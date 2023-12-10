@@ -32,7 +32,7 @@ const CartModal = ({ handleHideModalCart }) => {
 
     const phoneNumber = "6281285241889";
     const message = encodeURIComponent(
-      `Halo bang, aku mau order:\n\n${orderDetails}\n\nTotal: $${totalPrice}`
+      `Halo bang, aku mau order:\n\n${orderDetails}\n\nTotal Keseluruhan: $${totalPrice}`
     );
 
     const URL = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -50,6 +50,7 @@ const CartModal = ({ handleHideModalCart }) => {
   return (
     <Modal>
       <div className="flex flex-col gap-6 p-1: sm:p-2 w-full lg:w-[900px]">
+        <h2 className="text-2xl font-bold hidden md:inline-block">Cart</h2>
         <div className="flex flex-col gap-6 max-h-[500px] overflow-auto">
           {cartItems.map((product) => {
             return (
@@ -110,9 +111,9 @@ const CartModal = ({ handleHideModalCart }) => {
         </div>
         <div>
           <h3 className="text-md font-bold">Total Item: {totalItems}</h3>
-          <h3 className="text-md font-bold">Total Price: {totalPrice}</h3>
+          <h3 className="text-md font-bold">Total Price: ${totalPrice}</h3>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2 md:gap-0">
           <button
             type="button"
             className="bg-slate-600 hover:bg-slate-800 text-white py-3 px-8 rounded-xl text-sm"
