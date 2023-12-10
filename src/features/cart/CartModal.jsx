@@ -8,6 +8,7 @@ import {
   selectCartTotalItems,
   selectCartTotalPrices,
 } from "./cartSlice";
+import ProductCategory from "../productlist/ProductCategory";
 
 const CartModal = ({ handleHideModalCart }) => {
   const cartItems = useSelector(selectCartItems);
@@ -65,7 +66,19 @@ const CartModal = ({ handleHideModalCart }) => {
                     />
                   </div>
                   <div className="ml-10 w-[75%]">
-                    <h3 className="capitalize mt-3 text-lg">{product.title}</h3>
+                    {/* Mobile View START */}
+                    <h3 className="capitalize mt-3 text-lg md:hidden">
+                      {product.title}
+                    </h3>
+                    {/* Mobile View END */}
+
+                    {/* Desktop View START */}
+                    <h3 className="capitalize mt-3 text-lg hidden md:flex md:items-center md:gap-2">
+                      {product.title}
+                      <ProductCategory category={product.category} />
+                    </h3>
+                    {/* Desktop View END */}
+
                     <div className="flex items-center gap-2">
                       <h4 className="text-sm">{product.price}</h4>
                       <h3 className="text-lg font-bold">
