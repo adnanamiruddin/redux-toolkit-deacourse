@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../cart/cartSlice";
 import { selectAllProducts, setProducts } from "./productListSlice";
 import { FaStar, FaCartPlus } from "react-icons/fa";
+import ProductCategory from "./ProductCategory";
 
 const showRatingStarts = (rating) => {
   const stars = [];
@@ -48,10 +49,6 @@ const ProductList = () => {
     dispatch(addItemToCart(product));
   };
 
-  const toPascalCase = (str) => {
-    return str.replace(/\b\w/g, (match) => match.toUpperCase());
-  };
-
   return (
     <>
       {isLoading ? (
@@ -76,9 +73,7 @@ const ProductList = () => {
                 <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
                   {product.title}
                 </h5>
-                <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                  {toPascalCase(product.category)}
-                </span>
+                <ProductCategory category={product.category} />
 
                 <div className="flex items-center mt-3.5">
                   <div className="flex items-center space-x-1 rtl:space-x-reverse">
