@@ -45,7 +45,7 @@ const ProductList = () => {
   return (
     <>
       {isLoading ? (
-        <div className="flex justify-center items-center pt-40">
+        <div className="flex justify-center items-center -mt-40 min-h-screen">
           <div className="loader"></div>
         </div>
       ) : (

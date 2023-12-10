@@ -16,7 +16,7 @@ const SortProductsByAlphabet = () => {
   };
 
   return (
-    <div className="w-1/2 flex flex-col rounded-md shadow-sm">
+    <div className="md:w-1/2 w-full flex flex-col rounded-md shadow-sm mt-4 md:mt-0">
       <label className="block mb-2 font-medium text-gray-900 dark:text-white">
         Sort Products by Alphabet
       </label>
