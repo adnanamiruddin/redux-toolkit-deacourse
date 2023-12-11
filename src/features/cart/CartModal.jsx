@@ -124,10 +124,10 @@ const CartModal = ({ handleHideModalCart }) => {
           <button
             type="button"
             className={`bg-green-600 hover:bg-slate-800 text-white font-bold py-3 px-8 rounded-xl text-sm ${
-              totalItems === 0 ? "opacity-50 cursor-not-allowed" : ""
-            }}`}
+              totalItems === 0 ? "opacity-50" : ""
+            }`}
             onClick={handleCheckoutToWhatsapp}
-            disabled={totalItems === 0}
+            style={{ cursor: totalItems === 0 ? "not-allowed" : "pointer" }}
           >
             Checkout (WhatsApp)
           </button>
