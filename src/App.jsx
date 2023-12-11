@@ -8,6 +8,7 @@ import SortProductsByPrice from "./features/productlist/SortProductsByPrice";
 import SearchProducts from "./features/productlist/SearchProducts";
 import Footer from "./components/Footer";
 import { FaArrowUp } from "react-icons/fa";
+import FilterProducts from "./features/productlist/FilterProducts";
 
 const App = () => {
   const [isOpenModalCart, setIsOpenModalCart] = useState(false);
@@ -45,9 +46,17 @@ const App = () => {
         <CartModal handleHideModalCart={handleHideModalCart} />
       ) : null}
       <Header handleOpenModalCart={handleOpenModalCart} />
-      <main className="max-w-7xl mx-auto px-4 pt-24 pb-24 md:pb-16">
-        <SearchProducts />
+      <main className="max-w-7xl mx-auto px-4 py-24 md:px-10 md:pb-16">
+        <div className="md:hidden">
+          <SearchProducts />
+        </div>
         <div className="md:flex md:justify-between md:items-center mt-6 gap-8">
+          <div className="hidden md:w-1/2 md:flex md:flex-col md:rounded-md md:shadow-sm md:mt-0">
+            <label className="block mb-2 font-medium text-gray-900">
+              Filter Products
+            </label>
+            <FilterProducts />
+          </div>
           <SortProductsByPrice />
           <SortProductsByAlphabet />
         </div>

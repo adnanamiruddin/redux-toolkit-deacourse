@@ -33,7 +33,7 @@ const FilterProducts = () => {
   return (
     <select
       onChange={(e) => handleFilterByCategory(e.target.value)}
-      className="w-2/6 md:w-1/6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-s-lg md:rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 block"
     >
       <option value="all">All</option>
       {categories.map((category, i) => (
