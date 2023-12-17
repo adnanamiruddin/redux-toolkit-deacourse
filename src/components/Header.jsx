@@ -20,8 +20,8 @@ const Header = () => {
         </div>
         <button
           type="button"
-          className="relative rounded-full p-2 bg-teal-600 text-gray-100 mr-4"
           onClick={() => document.getElementById("cart_modal").showModal()}
+          className="relative rounded-full p-2 bg-teal-600 text-gray-100"
         >
           {cartTotalItems > 0 ? (
             <span className="absolute -top-2.5 -right-2 bg-red-600 text-white pb-0.5 font-bold rounded-lg h-6 px-1.5 flex justify-center items-center">

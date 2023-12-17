@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { FaStar, FaCartPlus } from "react-icons/fa";
-import ProductCategory from "./ProductCategory";
+import ProductCategory from "../../components/ProductCategory";
 
 const ProductItem = ({ product, handleClickAddToCart }) => {
   const showRatingStarts = (rating) => {
@@ -17,7 +17,7 @@ const ProductItem = ({ product, handleClickAddToCart }) => {
         <img
           src={product.image}
           alt={product.title}
-          className="w-full h-full object-contain group-hover:scale-110 transition-all duration-500 ease-in-out"
+          className="w-full h-full pb-1.5 pt-1 object-contain group-hover:scale-110 transition-all duration-500 ease-in-out"
         />
       </div>
       <ProductCategory category={product.category} />

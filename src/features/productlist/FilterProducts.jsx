@@ -30,6 +30,7 @@ const FilterProducts = () => {
   const handleFilterByCategory = (category) => {
     dispatch(filterProductByCategory(category));
   };
+
   return (
     <select
       onChange={(e) => handleFilterByCategory(e.target.value)}

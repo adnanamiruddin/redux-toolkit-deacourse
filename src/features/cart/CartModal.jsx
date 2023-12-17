@@ -8,7 +8,7 @@ import {
   selectCartTotalItems,
   selectCartTotalPrices,
 } from "./cartSlice";
-import ProductCategory from "../productlist/ProductCategory";
+import ProductCategory from "../../components/ProductCategory";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
