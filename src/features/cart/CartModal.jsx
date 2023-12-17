@@ -104,14 +104,14 @@ const CartModal = () => {
                   />
                   <div className="flex items-center text-black border-2 border-gray-300 rounded-lg gap-3">
                     <button
-                      className="py-1 px-2 text-teal-600 border-r-2 border-gray-300"
+                      className="py-1 px-2 text-teal-600 border-r-2 border-gray-300 hover:text-teal-400"
                       onClick={() => handleClickReduceFromCart(product.id)}
                     >
                       <FaMinus />
                     </button>
                     <h4 className="text-lg">{product.quantity}</h4>
                     <button
-                      className="py-1 px-2 text-teal-600 border-l-2 border-gray-300"
+                      className="py-1 px-2 text-teal-600 border-l-2 border-gray-300 hover:text-teal-400"
                       onClick={() => handleClickAddToCart(product)}
                     >
                       <FaPlus />
