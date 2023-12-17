@@ -43,7 +43,7 @@ const SearchProducts = () => {
         )}
       </div>
 
-      <div className="w-1/6 drawer-content">
+      <div className="w-1/6 drawer-content md:hidden">
         <label htmlFor="sort_drawer">
           <div className="py-2 px-3 flex justify-center rounded-r-lg bg-teal-600 border border-teal-600 hover:cursor-pointer">
             <CiFilter className="text-white text-2xl" />

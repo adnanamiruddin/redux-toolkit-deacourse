@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { FaArrowUp } from "react-icons/fa";
 import ProductCategoriesSlider from "./features/productlist/ProductCategoriesSlider";
 import SortProductsDrawer from "./features/productlist/SortProductsDrawer";
+import { CiFilter } from "react-icons/ci";
 
 const App = () => {
   const [isShowArrowButton, setIsShowArrowButton] = useState(false);
@@ -39,8 +40,16 @@ const App = () => {
         <div className="md:hidden">
           <SearchProducts />
         </div>
-        <div className="my-4">
+        <div className="my-4 flex justify-between">
           <ProductCategoriesSlider />
+          <div className="drawer-content hidden md:inline-block">
+            <label htmlFor="sort_drawer">
+              <div className="py-2 px-5 text-white text-sm font-medium flex justify-around items-center gap-3 rounded-lg bg-teal-600 border border-white hover:cursor-pointer hover:bg-white hover:text-teal-600 hover:border-teal-600">
+                <h4>Sort Products</h4>
+                <CiFilter className="text-2xl" />
+              </div>
+            </label>
+          </div>
         </div>
         <h2 className="text-3xl font-bold text-black">Product List</h2>
         <ProductList />
