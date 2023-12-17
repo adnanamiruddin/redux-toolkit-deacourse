@@ -40,7 +40,7 @@ const App = () => {
         <div className="md:hidden">
           <SearchProducts />
         </div>
-        <div className="my-5 flex justify-between">
+        <div className="mt-5 mb-0 md:my-5 flex justify-between">
           <ProductCategoriesSlider />
           <div className="drawer-content hidden md:inline-block">
             <label htmlFor="sort_drawer">
@@ -51,7 +51,6 @@ const App = () => {
             </label>
           </div>
         </div>
-        <h2 className="text-3xl font-bold text-black">Product List</h2>
         <ProductList />
       </main>
       <Footer />
