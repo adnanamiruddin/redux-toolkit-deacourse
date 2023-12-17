@@ -12,7 +12,7 @@ const ProductList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const getDataProducts = async () => {
+    const fetchDataProducts = async () => {
       setIsLoading(true);
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
@@ -33,7 +33,7 @@ const ProductList = () => {
         setIsLoading(false);
       }
     };
-    getDataProducts();
+    fetchDataProducts();
   }, [dispatch]);
 
   const handleClickAddToCart = (product) => {
