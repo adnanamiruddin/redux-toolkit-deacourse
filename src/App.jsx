@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-        // setIsShowArrowButton(true);
+        setIsShowArrowButton(true);
       } else {
         setIsShowArrowButton(false);
       }
@@ -54,14 +54,14 @@ const App = () => {
         <ProductList />
       </main>
       <Footer />
-      {isShowArrowButton ? (
-        <div
-          className="fixed bottom-4 right-4 bg-teal-700 lg:p-5 md:p-5 p-3 rounded-full cursor-pointer"
-          onClick={handleScrollToTop}
-        >
-          <FaArrowUp className="text-white text-sm" />
-        </div>
-      ) : null}
+      <div
+        className={`fixed bottom-4 right-4 bg-teal-700 lg:p-5 md:p-5 p-3 rounded-full cursor-pointer transition-all duration-500 ease-in-out ${
+          isShowArrowButton ? "opacity-100" : "opacity-0"
+        }`}
+        onClick={handleScrollToTop}
+      >
+        <FaArrowUp className="text-white text-sm" />
+      </div>
     </>
   );
 };

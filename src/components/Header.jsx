@@ -11,10 +11,13 @@ const Header = () => {
   return (
     <header className="bg-gradient-to-t from-teal-600 via-teal-500 to-teal-500 fixed w-full z-20">
       <div className="max-w-7xl mx-auto px-4 md:px-10 flex items-center justify-between h-20">
-        <h1 className="text-3xl font-bold text-white flex items-center gap-1">
+        <a
+          href="/"
+          className="text-3xl font-bold text-white flex items-center gap-1"
+        >
           <MdOutlineShoppingBag className="text-5xl" />
           NoxCart
-        </h1>
+        </a>
         <div className="hidden md:block w-3/6">
           <SearchProducts />
         </div>

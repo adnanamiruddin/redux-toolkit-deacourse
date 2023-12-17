@@ -11,7 +11,7 @@ const Footer = () => {
           </a>
           . All Rights Reserved.
         </span>
-        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0 gap-6 mr-6">
+        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0 gap-6 mr-16">
           <li>
             <a
               href="https://www.instagram.com/muh.adnan_putra/"
