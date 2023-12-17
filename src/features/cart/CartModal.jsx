@@ -77,7 +77,7 @@ const CartModal = () => {
                 className="w-1/2 object-contain rounded"
               />
               <h4 className="text-black font-medium">
-                Your cart is still empty. Let&#39;s shop first ^_^
+                Your cart is empty. Let&#39;s shop first ^_^
               </h4>
             </div>
           ) : (
@@ -99,7 +99,7 @@ const CartModal = () => {
                 </div>
                 <div className="flex flex-col justify-between items-end">
                   <FaRegTrashAlt
-                    className="text-xl text-gray-600"
+                    className="text-xl text-gray-600 hover:cursor-pointer hover:text-red-700"
                     onClick={() => handleClickTrash(product.id)}
                   />
                   <div className="flex items-center text-black border-2 border-gray-300 rounded-lg gap-3">
