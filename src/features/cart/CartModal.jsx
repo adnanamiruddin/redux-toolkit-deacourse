@@ -73,7 +73,7 @@ const CartModal = () => {
             <div className="flex flex-col justify-center items-center gap-4">
               <img
                 src={EmptyCartImage}
-                alt="Empty Cart Image"
+                alt="Empty Cart"
                 className="w-1/2 object-contain rounded"
               />
               <h4 className="text-black font-medium">

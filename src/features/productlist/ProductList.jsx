@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../cart/cartSlice";
 import { selectAllProducts, setProducts } from "./productListSlice";
 import ProductItem from "./ProductItem";
+import NoProductsFoundImage from "../../assets/no-products-found.jpeg";
 
 const ProductList = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -57,8 +58,15 @@ const ProductList = () => {
           ))}
         </div>
       ) : (
-        <div className="flex justify-center items-center pt-12 md:pt-40">
-          <p className="text-2xl text-gray-600">No products found</p>
+        <div className="flex flex-col justify-center items-center gap-4 h-[70vh]">
+          <img
+            src={NoProductsFoundImage}
+            alt="No Products Found"
+            className="w-1/2 md:w-1/4 object-contain rounded"
+          />
+          <h4 className="text-black font-medium">
+            Ups. No products found. Try again later ^_^
+          </h4>
         </div>
       )}
     </>
