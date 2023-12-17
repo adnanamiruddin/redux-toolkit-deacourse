@@ -26,7 +26,7 @@ const ProductCategoriesSlider = () => {
     <div className="flex overflow-y-scroll gap-2">
       <button
         onClick={() => dispatch(filterProductByCategory("all"))}
-        className="capitalize px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-white hover:bg-teal-600"
+        className="capitalize px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-white hover:bg-teal-600 focus:text-white focus:border-white focus:bg-teal-600"
       >
         All
       </button>
@@ -34,7 +34,7 @@ const ProductCategoriesSlider = () => {
         <button
           key={i}
           onClick={() => dispatch(filterProductByCategory(category))}
-          className="capitalize whitespace-nowrap px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-lime-500 hover:bg-teal-600"
+          className="capitalize whitespace-nowrap px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-lime-500 hover:bg-teal-600 focus:text-white focus:border-white focus:bg-teal-600"
         >
           {category}
         </button>
@@ -44,5 +44,3 @@ const ProductCategoriesSlider = () => {
 };
 
 export default ProductCategoriesSlider;
-
-// focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
