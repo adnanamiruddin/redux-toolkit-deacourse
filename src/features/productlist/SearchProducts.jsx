@@ -26,7 +26,7 @@ const SearchProducts = () => {
           type="text"
           value={searchInput}
           onChange={handleInputKeywords}
-          className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 md:bg-orange-50 rounded-s-lg md:rounded-lg border border-e-0 border-teal-600 focus:ring-teal-500 focus:border-teal-500"
+          className="block p-2.5 ps-3 w-full z-20 text-sm text-gray-900 bg-gray-50 md:bg-orange-50 rounded-s-lg md:rounded-lg border border-e-0 border-teal-600 focus:ring-teal-500 focus:border-teal-500"
           placeholder="Search product by title..."
         />
         {searchInput ? (

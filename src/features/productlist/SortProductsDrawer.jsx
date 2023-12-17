@@ -18,7 +18,7 @@ const SortProductsDrawer = () => {
           <div className="-mb-2 md:-mb-0 flex justify-between items-center">
             <h2 className="font-bold text-2xl">Sort Products</h2>
             <label htmlFor="sort_drawer">
-              <IoClose className="text-teal-700 text-4xl hover:cursor-pointer" />
+              <IoClose className="text-teal-700 text-4xl hover:cursor-pointer hover:text-gray-600" />
             </label>
           </div>
           <SortProductsByAlphabet />
@@ -30,23 +30,3 @@ const SortProductsDrawer = () => {
 };
 
 export default SortProductsDrawer;
-
-{
-  /* <dialog id="sort_modal" className="modal modal-bottom sm:modal-middle">
-<div className="modal-box bg-gray-50">
-  <div className="flex justify-between items-center mb-6">
-    <h3 className="font-bold text-2xl text-black">Sort Products</h3>
-
-    <form method="dialog">
-      <button>
-        <IoClose className="text-teal-700 text-3xl" />
-      </button>
-    </form>
-  </div>
-</div>
-
-<form method="dialog" className="modal-backdrop">
-  <button>Close</button>
-</form>
-</dialog> */
-}
