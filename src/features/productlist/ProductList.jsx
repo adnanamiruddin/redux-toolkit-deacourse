@@ -43,7 +43,7 @@ const ProductList = () => {
   return (
     <>
       {isLoading ? (
-        <div className="flex justify-center items-center pt-24 2xl:pt-40">
+        <div className="flex justify-center items-center h-[50vh]">
           <div className="loader"></div>
         </div>
       ) : products.length > 0 ? (
