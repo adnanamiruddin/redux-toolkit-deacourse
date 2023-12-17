@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-        setIsShowArrowButton(true);
+        // setIsShowArrowButton(true);
       } else {
         setIsShowArrowButton(false);
       }
