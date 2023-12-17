@@ -11,7 +11,6 @@ import { FaArrowUp } from "react-icons/fa";
 import FilterProducts from "./features/productlist/FilterProducts";
 
 const App = () => {
-  const [isOpenModalCart, setIsOpenModalCart] = useState(false);
   const [showArrowButton, setShowArrowButton] = useState(false);
 
   useEffect(() => {
@@ -32,20 +31,10 @@ const App = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleOpenModalCart = () => {
-    setIsOpenModalCart(true);
-  };
-
-  const handleHideModalCart = () => {
-    setIsOpenModalCart(false);
-  };
-
   return (
     <>
-      {isOpenModalCart ? (
-        <CartModal handleHideModalCart={handleHideModalCart} />
-      ) : null}
-      <Header handleOpenModalCart={handleOpenModalCart} />
+      <CartModal />
+      <Header />
       <main className="max-w-7xl mx-auto px-4 py-24 md:px-10 md:pb-16">
         <div className="md:hidden">
           <SearchProducts />
@@ -60,13 +49,13 @@ const App = () => {
           <SortProductsByPrice />
           <SortProductsByAlphabet />
         </div>
-        <h2 className="text-3xl font-bold mt-6">Product List</h2>
+        <h2 className="text-3xl font-bold mt-6 text-black">Product List</h2>
         <ProductList />
       </main>
       <Footer />
       {showArrowButton ? (
         <div
-          className="fixed bottom-4 right-4 bg-blue-700 lg:p-5 md:p-5 p-3 rounded-full cursor-pointer"
+          className="fixed bottom-4 right-4 bg-teal-700 lg:p-5 md:p-5 p-3 rounded-full cursor-pointer"
           onClick={handleScrollToTop}
         >
           <FaArrowUp className="text-white text-sm" />

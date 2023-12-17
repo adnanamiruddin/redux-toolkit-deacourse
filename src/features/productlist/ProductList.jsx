@@ -47,7 +47,7 @@ const ProductList = () => {
           <div className="loader"></div>
         </div>
       ) : products.length > 0 ? (
-        <div className="w-full h-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 py-4">
+        <div className="w-full h-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 py-4">
           {products.map((product) => (
             <ProductItem
               key={product.id}
@@ -58,9 +58,7 @@ const ProductList = () => {
         </div>
       ) : (
         <div className="flex justify-center items-center pt-12 md:pt-40">
-          <p className="text-2xl text-gray-600 dark:text-gray-400">
-            No products found
-          </p>
+          <p className="text-2xl text-gray-600">No products found</p>
         </div>
       )}
     </>

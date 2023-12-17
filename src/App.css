@@ -1,5 +1,5 @@
 #root {
-  @apply bg-orange-50;
+  @apply bg-teal-50;
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
