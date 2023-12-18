@@ -7,21 +7,22 @@ import ProductItem from "./ProductItem";
 import NoProductsFoundImage from "../../assets/no-products-found.jpeg";
 
 const ProductList = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const products = useSelector(selectAllProducts);
   const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchDataProducts = async () => {
-      setIsLoading(true);
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
         dispatch(setProducts(response.data));
       } catch (error) {
         console.error(error);
       } finally {
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
       }
     };
     fetchDataProducts();

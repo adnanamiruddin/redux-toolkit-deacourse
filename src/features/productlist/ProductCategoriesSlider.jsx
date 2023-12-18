@@ -16,9 +16,12 @@ const ProductCategoriesSlider = () => {
         );
         const data = await response.json();
         setCategories(data);
-        setIsLoading(false);
       } catch (error) {
         console.error(error);
+      } finally {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
       }
     };
     fetchCategories();
