@@ -21,7 +21,7 @@ const ProductCategoriesSlider = () => {
       } finally {
         setTimeout(() => {
           setIsLoading(false);
-        }, 1000);
+        }, 1500);
       }
     };
     fetchCategories();
@@ -30,13 +30,13 @@ const ProductCategoriesSlider = () => {
   if (isLoading) {
     return (
       <div className="flex overflow-y-scroll gap-2">
-        <button className="loading-button capi whitespace-nowrap px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-lime-500 hover:bg-teal-600 relative">
+        <button className="loading-button whitespace-nowrap px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-lime-500 hover:bg-teal-600 relative">
           All
         </button>
         {[...Array(4)].map((_, i) => (
           <button
             key={i}
-            className="loading-button capi whitespace-nowrap px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-lime-500 hover:bg-teal-600 relative"
+            className="loading-button whitespace-nowrap px-4 py-2 text-sm font-medium text-teal-600 bg-white border rounded-lg border-teal-600 hover:text-white hover:border-lime-500 hover:bg-teal-600 relative"
           >
             Loading...
           </button>

@@ -22,7 +22,7 @@ const ProductList = () => {
       } finally {
         setTimeout(() => {
           setIsLoading(false);
-        }, 500);
+        }, 1000);
       }
     };
     fetchDataProducts();
