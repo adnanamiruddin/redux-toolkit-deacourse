@@ -17,16 +17,6 @@ const ProductList = () => {
       setIsLoading(true);
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
-        // Sort products order by title ASC
-        response.data.sort((a, b) => {
-          if (a.title < b.title) {
-            return -1;
-          }
-          if (a.title > b.title) {
-            return 1;
-          }
-          return 0;
-        });
         dispatch(setProducts(response.data));
       } catch (error) {
         console.error(error);
